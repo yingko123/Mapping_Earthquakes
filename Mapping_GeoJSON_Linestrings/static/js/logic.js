@@ -2,8 +2,11 @@
 console.log("working");
 
 // Create the map object with a center and zoom level.
+<<<<<<< HEAD
 let map = L.map('mapid').setView([37.5, -122.5], 10);
-
+=======
+let map = L.map('mapid').setView([40.7899, -111.9791], 6);
+>>>>>>> Mapping_GeoJSON_Points
 
 
 // Syntax to set up multiple tile layers of map object
@@ -19,7 +22,11 @@ let map = L.map('mapid').setView([37.5, -122.5], 10);
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
+<<<<<<< HEAD
         id: 'mapbox/streets-v11',
+=======
+        id: 'mapbox/satellite-streets-v11',
+>>>>>>> Mapping_GeoJSON_Points
         tileSize: 512,
         zoomOffset: -1,
         accessToken: API_KEY
@@ -38,8 +45,11 @@ let marker3 = L.circle([34.0522, -118.2437], {
         radius: 100000,
         color: "black",
         fillColor: '#ffffa1'
+<<<<<<< HEAD
+     }).addTo(map);
+=======
 }).addTo(map);
-
+>>>>>>> Mapping_GeoJSON_Points
 
 
 // Get data from cities.js
@@ -52,7 +62,11 @@ cityData.forEach(function(city) {
            "<h2>" + city.city + "," + city.state + "</h2><hr><h3>Population "
            + city.population.toLocaleString()+"</h3>"
         ).addTo(map);
+<<<<<<< HEAD
        });      
+=======
+});      
+>>>>>>> Mapping_GeoJSON_Points
 
 // use circle marker instead
 
@@ -64,6 +78,7 @@ cityData.forEach(function(city) {
            "<h2>" + city.city + "," + city.state + "</h2><hr><h3>Population "
            + city.population.toLocaleString()+"</h3>"
         ).addTo(map);
+<<<<<<< HEAD
        });      
 
 // Add GeoJSON data.
@@ -96,7 +111,8 @@ L.geoJSON(sanFranAirport,{
         .bindPopup("<h2>" + feature.properties.name + "</h2>");
    }  
 }).addTo(map);
-     
+=======
+});      
 
 // Coordinates for each point to be used in the line.
 let line = [
@@ -110,3 +126,4 @@ let line = [
 L.polyline(line, {
         color: "yellow"
       }).addTo(map);
+>>>>>>> Mapping_GeoJSON_Points
