@@ -5,7 +5,7 @@ Our web app has three base map options (Streets, Satellite, Dark). In addition, 
 
 ## Sample Web App Output:
 
-<img src="static/images/sample_web_output.JPG" width = "500px">
+<img src="static/images/sample_web_output.JPG" width = "700px">
 
 
 
